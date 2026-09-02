@@ -1,0 +1,29 @@
+body {
+    background-color: #EEE;
+    margin: 0 auto;
+}
+
+h1 {
+    /* margin: top, right, bottom, left */
+    /* margin: 10px 2px 5px 20px; */
+    margin: 0 0 20px 0;
+}
+
+header {
+    background-color: #af6b4c;
+    color: #FFF;
+    text-align: center;
+    padding: 16px;
+}
+
+header a {
+    background-color: #a9684a;
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 1s ease;
+}
+header a:hover {
+    background-color: #814f38;
+}
