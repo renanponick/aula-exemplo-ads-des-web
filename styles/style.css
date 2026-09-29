@@ -27,3 +27,69 @@ header a {
 header a:hover {
     background-color: #814f38;
 }
+
+main {
+    padding: 16px;
+}
+
+section {
+    /* background-color: #979797; */
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #c7c7c7;
+}
+
+h2 {
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #af6b4c;
+}
+
+.last {
+    margin-bottom: 80px;
+}
+
+/* section:last-child {
+    margin-bottom: 80px;
+} */
+
+input, textarea {
+    width: 99%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#cor {
+    width: 50px;
+    height: 50px;
+}
+
+form div {
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #af6b4c;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+button:hover {
+    background-color: #814f38;
+}
+
+footer {
+    background-color: #c4c4c4;
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
