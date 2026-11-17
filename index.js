@@ -1,20 +1,27 @@
 import express from 'express'
+import db from './repository/index.js'
 
 const app = express()
-//             request, response 
-app.get("/api/soma", (req, res) => {
-    const num1 = Number(req.query.num1)
-    const num2 = Number(req.query.num2)
+app.use(express.json())
 
-    res.send({ soma: num1 + num2 })
+// C
+app.post("/api/v1/pessoa", (req, res) => {
+    const { id, cpf, email } = req.body
+
+    if (!id || !cpf || !email) {
+        res.send({ message: " avisar que é pra enviar tudo" })
+        return
+    }
+
+    db.push({ id, cpf, email })
+    res.send({ message: "Pessoa criada com sucesso" })
 })
-
-app.get("/api/sub/:num1/:num2", (req, res) => {
-    const num1 = Number(req.params.num1)
-    const num2 = Number(req.params.num2)
-
-    res.send({ sub: num1 - num2 })
-})
+// R
+app.get("/api/v1/pessoa/:id", (req, res) => {})
+// U
+app.put("/api/v1/pessoa/:id", (req, res) => {})
+// D
+app.delete("/api/v1/pessoa/:id", (req, res) => {})
 
 app.listen(3000, () => {
     console.log("servidor rodando na porta 3000")
