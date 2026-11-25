@@ -1,8 +1,10 @@
 import express from 'express'
 import db from './repository/index.js'
+import cors from 'cors' // <<<<<<<<<<<<<<<
 
 const app = express()
 app.use(express.json())
+app.use(cors())  // <<<<<<<<<<<<<<<
 
 // C
 app.post("/api/v1/pessoa", (req, res) => {
@@ -15,6 +17,10 @@ app.post("/api/v1/pessoa", (req, res) => {
 
     db.push({ id, cpf, email })
     res.send({ message: "Pessoa criada com sucesso" })
+})
+// R
+app.get("/api/v1/pessoas", (req, res) => {
+    res.send({ batata: db })
 })
 // R
 app.get("/api/v1/pessoa/:id", (req, res) => {})
